@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PFD CRAFT - Menu</title>
+    <meta name="google-site-verification" content="HBcBw8yC52OEaINS6VksMqTZlMCTjwIsUscmkmt34nY" />
+    <meta name="keywords" content="PFD Craft, Minecraft, création de mondes, Pyrobut, Fox8a7, Diamondsword216, jeu vidéo, Hapig, map Minecraft, studio, zgloubicola, pfd, PFD, PFDCraft, pfd craft">
+    <meta property="og:title" content="PFD CRAFT - Studios">
+    <meta property="og:description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
+    <meta property="og:image" content="https://i.imgur.com/kdD8R2a.png">
+    <meta property="og:url" content="https://pfdcraft.infrasky.fr/">
+    <meta property="og:type" content="website">
+    <meta property="og:color" content="#145273">
+
+    <link rel="icon" type="image/png" href="./Images/favicon.png">
+    <link rel="icon" href="./Images/pfd_logo.png">
+    <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+        body
+{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-image: url("./Images/Background.png");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+        html{
+            scroll-behavior: smooth;
+            scrollbar-color: aqua;
+        }
+
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .side-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #808080;
+            display: block;
+            transition: 0.3s;
+        }
+
+        
+        .side-menu span {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #808080;
+            display: block;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+        .side-menu span:hover {
+            color: #f1f1f1;
+        }
+        .side-menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 30px;
+            
+            padding: 10px;
+            
+            display: inline-block;
+            
+            
+            
+            cursor:pointer;
+            background-color: #111;
+            color: black;
+    
+            padding: 10px 35px;
+            border-radius: 10px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            transition: 0.5s;
+        }
+        .openbtn .icon{
+            color: white;
+            text-shadow: black;
+            background-color: transparent;
+            margin-right: 10px;
+            text-shadow: none;
+            transition: 0.3s;
+            
+
+        }
+
+        .openbtn:hover{
+            transform: scale(1.2);
+            
+
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        .contour-texte2 :hover{
+        color: whitesmoke;
+        transition: .3s;
+        }
+
+
+
+        .imagehoover {
+            transform: scale(1);
+            transition: 0.3s;
+        }
+
+        .imagehoover :hover{
+            
+            transform: scale(1.15);
+            transition: 0.3s;
+        }
+        .scrollup{
+    transform: scale(3);
+    width:20px;
+    height: 20px;
+    color: white;
+    text-align:center;
+    align-content:end;
+    position: relative;
+    left: 975px;
+    top: 25px;
+    border: 2px solid rgb(102, 102, 102);
+    background-color: rgb(102, 102, 102);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.scrollup:hover {
+    transform: scale(3.2);
+    border: 2px solid lime;
+    background-color: lime;
+}
+.scrollup:hover span {
+    width:30px;
+    height: 30px;
+    transition: 0.3s;
+}
+.conteneur{
+                                
+    color: red;
+    align-items:  center;
+    align-content: baseline;
+    transition: 0.3s;
+}
+.conteneur a :hover{
+    color: wheat;
+    transition: 0.3s;
+}
+.conteneur img{
+    color: red;
+    align-items:  center;
+    align-self: auto;
+    height:2em;
+    vertical-align:middle;
+                                
+}
+    </style>
+</head>
+<body>
+    <div id="SideMenu" class="side-menu">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="https://pfdcraft.infrasky.fr">Menu </a>
+        <a href="#">Projets</a>
+        <span onclick="scrollToBottom()">Contact</span>
+        <a href="membres">À propos</a>
+        
+        
+    </div>
+
+    <span class="openbtn" onclick="openNav()" id="Openbtn">
+        <span class="icon" >&#9776;</span></span>
+
+    <div id="main">
+        <h1 class="contour-texte police1"><a href="https://pfdcraft.infrasky.fr/" style="text-decoration: none; color: inherit;">PFD CRAFT - STUDIOS</a></h1>
+        <div id="carte2">
+            <p style="font-size: 16px;">PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. 
+                <br>Le groupe est constitué de <b>Pyrobut</b>, <b>Fox8a7</b> et <b>Diamondsword216</b></p>
+            <p style="font-size: 16px;"><u><a href="membres" class="policelien">• Plus d'informations</a></u></p>
+            <h1>Nos Projets :</h1>
+            <p style="font-size: 16px;">Actuellement, Nous Sommes En train de travailler sur une Map nommée <b>"Hapig"</b><br>
+                Le Gameplay est inspiré par le jeu roblox nommé <b>"<a href="https://www.roblox.com/games/4623386862/Piggy" class="texte-blanc"><u>Piggy</u></a>"</b> crée par Minitoon.<br>
+                À part le gameplay, l'histoire du jeu et les différentes cartes dans le jeu (à part la 1ère) ont été inventées pur l'occasion<br>
+                Plus d'informations en cliquant sur l'image</p>
+            <h1 class="contour-texte2"><a href="hapig" style="color:  inherit;text-decoration: none;"><b><u>Hapig</b></u></a></h1>
+            <a href="hapig" class="imagehoover">
+                
+                <img  src="./Images/Hapig.PNG" alt="Hapig.png"  width="640" height="360">
+                
+                
+            </a>
+            <h1 class="contour-texte3"><b><u>Autre(s) Map(s) à venir :</u></b></h1>
+            <img src="./Images/Thumbnail.png" alt="à venir.png" width="640" height="360">
+        </div>
+        <div id="carte3">
+            <h1 class="contour-texte"><b>Nos Réseaux sociaux:</b></h1>
+            <footer>
+                <div class="scrollup" onclick="scrollToTop()">
+                    <span >
+                        <b>
+                            ⬆     
+                        </b>
+                        
+                    </span>
+                </div>
+                
+                <div class="conteneur">
+                    
+                    <a href="https://www.youtube.com/@pfdcraftstudios"style="color: inherit;" target="_blank"><img src="./Images/YT_logo.png" alt="youtube_logo.png">Youtube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/pfdstudios1/"style="color: inherit;"target="_blank"><img src="./Images/inst_logo.png" alt="insta_logo.png">Instagram</a><br><br>
+                    <a href="https://twitter.com/pfdcraftstudios"style="color: inherit;"target="_blank"><img src="./Images/twitter_logo.png" alt="twitter_logo.png">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.tiktok.com/@pfdcraft.studio"style="color: inherit;"target="_blank"><img src="./Images/tiktok_logo.png" alt="tiktok_logo.png">Tiktok</a><br><br>
+                    <a href="https://discord.gg/XeCT7VfnkC" style="color: inherit;"target="_blank"><img src="./Images/discord_logo.png" alt="youtube_logo.png">Discord</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.reddit.com/user/PFDcraft_studio/"style="color: inherit;"target="_blank"><img src="./Images/reddit_logo.png" alt="reddit_logo.png">Reddit</a><br><br>
+                    
+                </div>               
+            </footer>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            const sidemenu = document.getElementById("SideMenu")
+            const main = document.getElementById("main")
+            const btn = document.getElementById("Openbtn")
+
+           
+        
+        if (sidemenu.style.width === "250px"){
+            
+
+            sidemenu.style.width = "0";
+            main.style.marginLeft = "0";
+            btn.style.marginLeft = "0";
+        }else {
+            sidemenu.style.width = "250px";
+            main.style.marginLeft = "250px";
+            btn.style.marginLeft = "250px";
+        }
+        }
+
+        function closeNav() {
+            document.getElementById("SideMenu").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("Openbtn").style.marginLeft = "0";
+        }
+
+        function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            
+            behavior:"smooth"
+        });
+    }
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior:"smooth"
+            
+    })}
+    </script>
+</body>
+</html>

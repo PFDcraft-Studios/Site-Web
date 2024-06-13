@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Lemon Milk Bold';
+    src: url('LEMONMILK-Bold.woff') format('woff'),
+         url('LEMONMILK-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Nightcore';
+    src: url('Nightcore/Nightcore Demo.woff') format('woff'),
+         url('Nightcore/Nightcore Demo.woff2') format('woff2'),
+         url('Nightcore/Nightcore Demo.ttf') format('truetype');
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: aqua;
+}
+.contour-texte{
+    color: black;
+    text-shadow: 
+        -1px -1px 0 lime,
+        1px -1px 0 lime,
+        -1px 1px 0 lime,
+        1px 1px 0 lime;
+}
+.contour-texte2{
+    color: rgb(255, 1, 1);
+    text-shadow:
+    -3px -3px 0 rgb(73, 0, 0),
+    3px -3px 0 rgb(73, 0, 0),
+    -3px 3px 0 rgb(73, 0, 0),
+    3px 3px 0 rgb(73, 0, 0); 
+    transition: .3s;  
+}
+.contour-texte2 :hover{
+    color: whitesmoke;
+}
+.contour-texte3{
+    color: black;
+    text-shadow:
+    -1px -1px 0 gray,
+    1px -1px 0 gray,
+    -1px 1px 0 gray,
+    1px 1px 0 gray;   
+}
+.roboto-regular{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.police1{
+    font-family: 'Lemon Milk Bold';
+}
+.police2{
+    font-family: 'Nightcore';
+}
+.policelien{
+
+        text-shadow: 
+            1px 1px 0 #000, 
+            -1px -1px 0 #000, 
+            -1px 1px 0 #000, 
+            1px -1px 0 #000, 
+            1px 0 0 #000, 
+            -1px 0 0 #000, 
+            0 1px 0 #000, 
+            0 -1px 0 #000;
+        
+    
+    
+}
+.conteneur{
+                                
+    color: initial;
+}
+.conteneur img{
+    height:1em;
+    margin-right: 10px;
+}
+.texte-gauche{
+    text-align:left;
+}
+.texte-semi-gauche{
+    text-align: left;
+    position: relative;
+    left: 3%;
+}
+.texte-droite{
+    text-align:right;
+}
+.texte-center{
+    text-align: center;
+}
+.texte-center img{
+    size: 5em;
+}
+.credits{
+    margin-right: 20px;
+}
+.texte-blanc{
+    color: white;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+p{
+    color: white
+}
+#carte1
+{
+    width: 1200px;
+    margin:auto;
+    background-color: black;
+    text-align: center;
+    align-content: center;
+}
+#carte2
+{
+    width: 1100px;
+    margin:auto;
+    background-color: rgb(3, 77, 3);
+    text-align: center;
+    align-content: center;
+}
+#carte3
+{ 
+    width: 1100px;
+    margin:auto;
+    background-color: rgb(0, 44, 0);
+    text-align: center;
+    align-content: center;
+}
+#carte4
+{
+	width: 99%;
+	margin:auto;
+	background-color: #160000;
+	text-align: center;
+	align-content: center;
+    
+}
+#carte5
+{ 
+    width: 98%;
+    margin: auto;
+    background-image: url("./Images/Hapig.PNG");
+    background-position-y: center;
+    text-align: center;
+    
+    align-items:  center;
+    align-content: baseline;
+    position:static;
+    top:0px;
+    
+    
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PFD CRAFT - À Propos</title>
+        <link rel="icon" href="./Images/pfd_logo.png">
+        <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+            }
+            html{
+                scroll-behavior: smooth;
+                scrollbar-color: aqua;
+            }
+    
+            .side-menu {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+    
+            .side-menu a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #808080;
+                display: block;
+                transition: 0.3s;
+            }
+    
+            
+            .side-menu span {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #808080;
+                display: block;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            .side-menu a:hover {
+                color: #f1f1f1;
+            }
+            .side-menu span:hover {
+                color: #f1f1f1;
+            }
+            .side-menu .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+    
+            .openbtn {
+                font-size: 30px;
+                
+                padding: 10px;
+                
+                display: inline-block;
+                
+                
+                
+                cursor:pointer;
+                background-color: #111;
+                color: black;
+        
+                padding: 10px 35px;
+                border-radius: 10px;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 2;
+                transition: 0.5s;
+            }
+            .openbtn .icon{
+                color: white;
+                text-shadow: black;
+                background-color: transparent;
+                margin-right: 10px;
+                text-shadow: none;
+                transition: 0.3s;
+                
+    
+            }
+    
+            .openbtn:hover{
+                transform: scale(1.2);
+                
+    
+            }
+    
+            #main {
+                transition: margin-left .5s;
+                padding: 16px;
+            }
+    
+            .contour-texte2 :hover{
+            color: whitesmoke;
+            transition: .3s;
+            }
+    
+    
+    
+            .imagehoover {
+                transform: scale(1);
+                transition: 0.3s;
+            }
+    
+            .imagehoover :hover{
+                
+                transform: scale(1.15);
+                transition: 0.3s;
+            }
+            .scrollup{
+        transform: scale(3);
+        width:20px;
+        height: 20px;
+        color: white;
+        text-align:center;
+        align-content:end;
+        position: relative;
+        left: 975px;
+        top: 25px;
+        border: 2px solid rgb(102, 102, 102);
+        background-color: rgb(102, 102, 102);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .scrollup:hover {
+        transform: scale(3.2);
+        border: 2px solid lime;
+        background-color: lime;
+    }
+    .scrollup:hover span {
+        width:30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+    .conteneur{
+                                    
+        color: red;
+        align-items:  center;
+        align-content: baseline;
+        transition: 0.3s;
+    }
+    .conteneur a :hover{
+        color: wheat;
+        transition: 0.3s;
+    }
+    .conteneur img{
+        color: red;
+        align-items:  center;
+        align-self: auto;
+        height:2em;
+        vertical-align:middle;
+                                    
+    }
+        </style>
+    </head>
+    <body>
+        <div id="SideMenu" class="side-menu">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <a href="https://pfdcraft.infrasky.fr">Menu </a>
+            <a href="#">Projets</a>
+            <span onclick="scrollToBottom()">Contact</span>
+            <a href="membres">À propos</a>
+            
+            
+        </div>
+    
+        <span class="openbtn" onclick="openNav()" id="Openbtn">
+            <span class="icon" >&#9776;</span></span>
+
+        <div id="main">
+                <h1 class="contour-texte police1"> 
+                    <a href="https://pfdcraft.infrasky.fr/" style="text-decoration: none; color: inherit;">
+                    PFD CRAFT - STUDIOS
+                    </a>
+                </h1>
+                <div id="carte2">
+                <p style="font-size: 16px;">Pfd Craft est un groupe de créateurs de mondes sur le jeu vidéo Minecraft crée par <br>
+                    Pyrobut, Fox8a7 et Diamondsword216. <br></p>
+                <p style="font-size: 16px;">L'idée de créer le groupe est arrivée pendant la création de la map Hapig<br>
+                    Au début la création de la map à été commencée par Diamondsword216 et Fox8a7 (Nov. 2022)<br>
+                    puis après avoir arrété pendant quelques mois. Nous avons repris la création avec pyrobut (Aout 2023).</p>
+
+                <h1 class="contour-texte police1; texte-semi-gauche">Les Membres :</h1>  
+
+                <p style="font-size: 16px;"><b>Pyrobut</b> est un joueur Minecraft pvp qui s'est développé des talents en build<br>
+                    grâce aux survies Minecraft qu'il a fait. Il a une grande Imagination et une grande inspiration </p>
+                <p style="font-size: 16px;"><b>Fox8a7</b> est un maître des command blocks sur minecraft, <br>
+                    un superbe développeur de bot discord ainsi qu'un incroyable musicien</p>
+                <p style="font-size: 16px;"><b>Diamondsword216</b> est un petit créateur de contenu/monteur <br>
+                    qui à une passion pour la création sur (ainsi que dehors) minecraft</p>
+                <img src="./Images/PFDCRAFT.png" alt="PFD CRAFT" width="560" height="315">
+                </div>
+                <div id="carte3">
+                    <h1 class="contour-texte"><b>Nos Réseaux sociaux:</b></h1>
+                    <footer>
+                        <div class="scrollup" onclick="scrollToTop()">
+                            <span >
+                                <b>
+                                    ⬆     
+                                </b>
+                                
+                            </span>
+                        </div>
+                       
+                        <div class="conteneur">
+
+                            <a href="https://www.youtube.com/@pfdcraftstudios"style="color: inherit;" target="_blank"><img src="./Images/YT_logo.png" alt="youtube_logo.png">Youtube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/pfdstudios1/"style="color: inherit;"target="_blank"><img src="./Images/inst_logo.png" alt="insta_logo.png">Instagram</a><br><br>
+                            <a href="https://twitter.com/pfdcraftstudios"style="color: inherit;"target="_blank"><img src="./Images/twitter_logo.png" alt="twitter_logo.png">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.tiktok.com/@pfdcraft.studio"style="color: inherit;"target="_blank"><img src="./Images/tiktok_logo.png" alt="tiktok_logo.png">Tiktok</a><br><br>
+                            <a href="https://discord.gg/XeCT7VfnkC" style="color: inherit;"target="_blank"><img src="./Images/discord_logo.png" alt="youtube_logo.png">Discord</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.reddit.com/user/PFDcraft_studio/"style="color: inherit;"target="_blank"><img src="./Images/reddit_logo.png" alt="reddit_logo.png">Reddit</a><br><br>
+                            
+                        </div>               
+                    </footer>
+                    
+                    
+                </div>
+            </div>
+        
+            <script>
+                function openNav() {
+                    const sidemenu = document.getElementById("SideMenu")
+                    const main = document.getElementById("main")
+                    const btn = document.getElementById("Openbtn")
+        
+                   
+                
+                if (sidemenu.style.width === "250px"){
+                    
+        
+                    sidemenu.style.width = "0";
+                    main.style.marginLeft = "0";
+                    btn.style.marginLeft = "0";
+                }else {
+                    sidemenu.style.width = "250px";
+                    main.style.marginLeft = "250px";
+                    btn.style.marginLeft = "250px";
+                }
+                }
+        
+                function closeNav() {
+                    document.getElementById("SideMenu").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                    document.getElementById("Openbtn").style.marginLeft = "0";
+                }
+        
+                function scrollToBottom() {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    
+                    behavior:"smooth"
+                });
+            }
+            function scrollToTop() {
+                window.scrollTo({
+                    top: document.body.scrollTop,
+                    
+                    behavior:"auto",
+                    
+            })}
+            </script>
+        </body>
+        </html>
+        

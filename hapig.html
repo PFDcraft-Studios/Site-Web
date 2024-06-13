@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PFD CRAFT - Hapig</title>
+
+        <meta name="google-site-verification" content="HBcBw8yC52OEaINS6VksMqTZlMCTjwIsUscmkmt34nY" />
+        <meta name="keywords" content="PFD Craft, Minecraft, création de mondes, Pyrobut, Fox8a7, Diamondsword216, jeu vidéo, Hapig, map Minecraft, studio, hapig,Hapig,Hapik, pfd, PFD, PFDCraft">
+        <meta property="og:title" content="Hapig">
+        <meta property="og:description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
+        <meta property="og:image" content="https://i.imgur.com/PbcHr6y.png">
+        <meta property="og:url" content="https://pfdcraft.infrasky.fr/hapig">
+        <meta property="og:type" content="website">
+        <meta property="og:color" content="#145273">
+    
+        <link rel="icon" type="image/png" href="./Images/hapig_head.png">
+        <link rel="icon" href="./Images/hapig_head.png">
+        <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            html {
+            scroll-behavior: smooth;
+        }
+            body {
+                font-family: "Roboto", sans-serif;
+				background-color: black;
+            }
+    
+            .side-menu {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+    
+            .side-menu a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #808080;
+                display: block;
+                transition: 0.3s;
+            }
+    
+            
+            .side-menu span {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #808080;
+                display: block;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            .side-menu a:hover {
+                color: #f1f1f1;
+            }
+            .side-menu span:hover {
+                color: #f1f1f1;
+            }
+            .side-menu .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+    
+            .openbtn {
+                font-size: 30px;
+                
+                padding: 10px;
+                
+                display: inline-block;
+                
+                
+                
+                cursor:pointer;
+                background-color: #111;
+                color: black;
+        
+                padding: 10px 35px;
+                border-radius: 10px;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 2;
+                transition: 0.5s;
+            }
+            .openbtn .icon{
+                color: white;
+                text-shadow: black;
+                background-color: transparent;
+                margin-right: 10px;
+                text-shadow: none;
+                transition: 0.3s;
+                
+    
+            }
+    
+            .openbtn:hover{
+                transform: scale(1.2);
+                
+    
+            }
+    
+            #main {
+                transition: margin-left .5s;
+                padding: 16px;
+            }
+    
+            .contour-texte2 :hover{
+            color: whitesmoke;
+            transition: .3s;
+            }
+    
+    
+    
+            .imagehoover {
+                transform: scale(1);
+                transition: 0.3s;
+            }
+    
+            .imagehoover :hover{
+                
+                transform: scale(1.15);
+                transition: 0.3s;
+            }
+            .scrollup{
+        transform: scale(3);
+        width:20px;
+        height: 20px;
+        color: white;
+        text-align:center;
+        align-content:end;
+        position: relative;
+        left: 975px;
+        top: 25px;
+        border: 2px solid rgb(102, 102, 102);
+        background-color: rgb(102, 102, 102);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .scrollup:hover {
+        transform: scale(3.2);
+        border: 2px solid lime;
+        background-color: lime;
+    }
+    .scrollup:hover span {
+        width:30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+    .conteneur{
+                                    
+        color: red;
+        align-items:  center;
+        align-content: baseline;
+        transition: 0.3s;
+    }
+    .conteneur a :hover{
+        color: wheat;
+        transition: 0.3s;
+    }
+    .conteneur img{
+        color: red;
+        align-items:  center;
+        align-self: auto;
+        height:2em;
+        vertical-align:middle;
+                                    
+    }
+        </style>
+</head>
+<body>
+    <div id="SideMenu" class="side-menu">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="https://pfdcraft.infrasky.fr">Menu </a>
+        <a href="#">Projets</a>
+        <span onclick="scrollToBottom()">Contact</span>
+        <a href="membres">À propos</a>
+        
+        
+    </div>
+
+    <span class="openbtn" onclick="openNav()" id="Openbtn">
+        <span class="icon" >&#9776;</span></span>
+
+        <div id="main">
+
+       
+           <div id="carte5">
+            <h1 class="contour-texte2 police2" style="font-size: 78px;">Hapig</h1>
+           </div>
+            <div id="carte4">
+            <h1 class="contour-texte2 police1"><u>Présentation du mode de jeu</u></h1>
+            <p style="font-size: 16px;">Hapig est un minijeu Horreur Minecraft crée par PFD craft studios inspiré par le jeu roblox piggy. à peu près 90% du jeu à été réimaginé pour l'occasion <br>(c'est à dire les maps, le gameplay, l'histoire et les musiques)</p>
+                
+            <h1 class="texte-gauche contour-texte2 police1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Gameplay</u> :</h1>
+                
+            <p style="font-size: 17px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans le jeu il y a deux camps, les survivants et le "pig". Pour les survivants, le but est de s'échapper de la carte choisie à l'aide de différents objets (clefs, clé plates, briquet, ect...)
+                Pour le "pig" il y a plusieurs moyen de gagner, soit tuer tout les survivants avant qu'ils ne s'échappent, soit empêcher les survivants de s'échapper jusqu'à la fin de la partie (10min30)
+                Le "pig" ne peux pas s'accroupir, ce qui l'empêche de suivre les survivants dans certains endroits de la carte ce qui avantage les survivants pour réussir à semer le "pig". Le "pig" est aussi plus lent que les survivants.</p>
+                
+                <h1 class="texte-gauche contour-texte2 police1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Développement</u> :</h1>
+                
+            <p style="font-size: 17px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le développement de la map est en majorité effectué par Pyrobute, Fox8a7 et Diamondsword216 avec parfois une légère aide pour la construction des cartes (voir les crédits en bas de la page) 
+                sinon la grande majorité du développement est juste les trois membres de pfd craft ce qui est la raison pour laquelle le développement prends du temps. 
+                le développement de la map à commencé pour la première fois en novembre 2022 et à été légèrement continué en mars 2023 puis une grane pose à été effectuée pour après avoir repris le développement de la map
+                de manière plus sèrieuse depuis fin aout 2023, depuis nous avons posté 3 teasers sur notre chaîne youtube.</p>
+                
+                <h2 class="texte-gauche contour-texte2 police1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans le futur :</h2>
+                
+            <p style="font-size: 17px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actuellement nous devons Finir la consturction de la 4ème carte, qui est la plus grande des 4, ensuite nous devrons finir de les relier les 4 ensemble et finir de construire le décor. 
+                Une fois que toute la construction des quatres cartes sera finie, nous allons nous occuper des cinématiques, des lignes de dialogues et tout le reste qui est en rapport avec l'intégration de l'histoire dans la map. 
+                Les Musiques devront être terminés, Et nous devrons poster des trailers plus longs et plus travaillés que les teasers une fois tout terminé. Afin d'ouvrir le monde à un plus grand public, nous 
+                devrons aussi trouver une manière de traduire l'entièreté du monde anglais, c'est à dire les lignes de dialogues et tout textes informatifs et autres textes en anglais. Le but est qu'il y ait deux versions du 
+                monde (anglais et français) et que le monde soit digne d'une map minecraft horreur/minijeu complète.</p>
+            <img src="./Images/Screenshot1.png" alt="screenshot1" width="560" height="315">
+            <img src="./Images/Screenshot2.png" alt="screenshot2" width="560" height="315">
+            <img src="./Images/Screenshot3.png" alt="screenshot3" width="560" height="315">
+            <img src="./Images/Screenshot4.png" alt="screenshot4" width="560" height="315">
+            <img src="./Images/Screenshot5.png" alt="screenshot5" width="560" height="315">
+            <img src="./Images/Screenshot6.png" alt="screenshot6" width="560" height="315">
+            <img src="./Images/Screenshot7.png" alt="screenshot7" width="560" height="315">
+            <h1 class="texte-gauche">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>La Map sur Internet :</u></h1>
+            <style>
+                .texte-center {
+                    text-align: center;
+                    border: 4px solid rgb(117, 180, 0); /* Couleur bleue avec une épaisseur de 2px */
+                    padding: 10px; /* Espacement interne pour éviter que le texte touche la bordure */
+                    padding-left: 200px;
+                    padding-right: 200px;
+                    display: inline-block; /* Pour que la bordure s'ajuste à la largeur du contenu */
+                    border-radius: 10px;
+                    text-decoration: none; 
+                    background-image: url('./Images/PFDCRAFT.png');
+                    background-position: calc(50% + -35px) calc(50% + -23px);
+
+                    
+                }
+                .texte-center img{
+                    size: 10em;
+                    height: 10em;
+                    width: 10em;
+                }
+
+                
+            </style>
+                <a href="https://www.google.com/search?client=opera-gx&hs=pN9&sca_esv=b6848266329b4871&sxsrf=ADLYWIKl3zLcWF2gjVO3mFi0XcJgwnjbZQ:1717966448639&q=lebron+james&uds=ADvngMgJJZ3sWYwFKSIsRiA2eMJNi_0iq8P-B4wgshQhU0peb2k-qZfPoDjXXGmOxn2Ex_uyq-GA3Vb4POY4SNbnVZLgt3NDl4iPAsyGgjI1p2N_9qiYJSdOpu85ArdJMENNlWnJV1xDM8csnDYIdMQBSGzZeNGhM_NbHWxhTp9zmiM_XH5Uyx4RWFQenSApaTvvqIFfCUVm3VV1HlcxKI7v4M8nFFOy6dw-aF7j0oY0nl_4rCnwx7iIERgVi4n3P9M1imVz0-_KSKM-0i8HIhiqvgLhwK0gVS-MB7gHcUrqUqlfXJtn-18&udm=2&prmd=invbz&sa=X&ved=2ahUKEwiEz6Dfs8-GAxU9Q6QEHdTCDDYQtKgLegQICxAB" target="_blank" style="text-decoration: none; color: inherit" class="texte-center">
+                <h1 class="contour-texte">Télécharger la map <br><br> <img src="./Images/download.png" alt="download.png"> </h1>
+                    
+            </a>
+            <h1 class=" contour-texte">Les Teasers : </h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/DCOJTjfTKr4?si=KQIGX_AanJnDIols" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l5JAItubuuI?si=-7y3eScLK9uZANes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8sOdu0TjFRI?si=dFR6P5u-aNO1dc9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="contour-texte police1">Crédits de la map :</h2>
+            <p><b>Pyrobut :</b> Build, design du gameplay</p>
+            <p><b>Fox8a7 :</b> Command Blocs, Block Display histoire, Build, Musiques</p>
+            <p><b>Diamondsword216 :</b> Histoire, Build, Block Display</p>
+            <p><b>Track, 7. :</b> Musiques, Sound Effect (personnalisés)</p>
+            <p><b>Eddie6671 :</b> Build </p>
+            <p><b>Milix :</b> Build </p>
+            <p><b>MixlaMc :</b> Build </p>
+            <h2 class="contour-texte police1">Testeurs :</h2>
+            <p><b>Caramelloo :</b> Playtest</p>
+            <p><b>MixlaMc :</b> Playtest</p>
+            <p><b>Milix :</b> Playtest</p>
+            <p><b>Moon3dsXL :</b> Playtest</p>
+            <p><b>Eddie6671 :</b> Playtest </p>
+            <p><b>Daylowww :</b> Playtest</p>
+            <p><b>Josans :</b> Playtest</p>
+            <h2 class="contour-texte police1">Autres Crédits :</h2>
+            <p><b>Mojang/Microsoft :</b> <a href="https://www.minecraft.net/fr-fr" class="texte-blanc">Minecraft</a></p>
+            <p><b>Minitoon :</b> <a href="https://www.roblox.com/games/4623386862/Piggy" class="texte-blanc">Jeu Original</a></p>
+            </div>
+            <div id="carte3">
+                <h1 class="contour-texte"><b>Nos Réseaux sociaux:</b></h1>
+                <footer>
+                    <div class="scrollup" onclick="scrollToTop()">
+                        <span >
+                            <b>
+                                ⬆     
+                            </b>
+                            
+                        </span>
+                    </div>
+                   
+                    <div class="conteneur">
+
+                        <a href="https://www.youtube.com/@pfdcraftstudios"style="color: inherit;" target="_blank"><img src="./Images/YT_logo.png" alt="youtube_logo.png">Youtube</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/pfdstudios1/"style="color: inherit;"target="_blank"><img src="./Images/inst_logo.png" alt="insta_logo.png">Instagram</a><br><br>
+                        <a href="https://twitter.com/pfdcraftstudios"style="color: inherit;"target="_blank"><img src="./Images/twitter_logo.png" alt="twitter_logo.png">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.tiktok.com/@pfdcraft.studio"style="color: inherit;"target="_blank"><img src="./Images/tiktok_logo.png" alt="tiktok_logo.png">Tiktok</a><br><br>
+                        <a href="https://discord.gg/XeCT7VfnkC" style="color: inherit;"target="_blank"><img src="./Images/discord_logo.png" alt="youtube_logo.png">Discord</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.reddit.com/user/PFDcraft_studio/"style="color: inherit;"target="_blank"><img src="./Images/reddit_logo.png" alt="reddit_logo.png">Reddit</a><br><br>
+                        
+                    </div>               
+                </footer>
+                
+                
+            </div>
+        </div>
+    
+        <script>
+            function openNav() {
+                const sidemenu = document.getElementById("SideMenu")
+                const main = document.getElementById("main")
+                const btn = document.getElementById("Openbtn")
+    
+               
+            
+            if (sidemenu.style.width === "250px"){
+                
+    
+                sidemenu.style.width = "0";
+                main.style.marginLeft = "0";
+                btn.style.marginLeft = "0";
+            }else {
+                sidemenu.style.width = "250px";
+                main.style.marginLeft = "250px";
+                btn.style.marginLeft = "250px";
+            }
+            }
+    
+            function closeNav() {
+                document.getElementById("SideMenu").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("Openbtn").style.marginLeft = "0";
+            }
+    
+            function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                
+                behavior:"smooth"
+            });
+        }
+        function scrollToTop() {
+            window.scrollTo({
+                top: document.body.scrollTop,
+                
+                behavior:"auto"
+                }
+            )
+
+        }
+        </script>
+    </body>
+    </html>
+    
