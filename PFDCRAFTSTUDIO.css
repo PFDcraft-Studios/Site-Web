@@ -141,15 +141,16 @@ p{
 }
 #carte5
 { 
-    width: 98%;
+    width: 99%;
     margin: auto;
     background-image: url("./Images/Hapig.PNG");
-    background-position-y: center;
+    background-size: auto;
+    background-position: center;
     text-align: center;
     
     align-items:  center;
     align-content: baseline;
-    position:static;
+    position:relative;
     top:0px;
     
     

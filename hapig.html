@@ -183,6 +183,10 @@
         vertical-align:middle;
                                     
     }
+
+    .credit_texte{
+        text-align: left;
+    }
         </style>
 </head>
 <body>
@@ -257,7 +261,21 @@
                     height: 10em;
                     width: 10em;
                 }
-
+                .credit{
+                    display: flex;
+                    justify-content: center;
+                }
+                .text_biengauche{
+                    flex: 1;
+                    
+                    text-align: left;
+                    margin-left: 20%;
+                }
+                .text_extremegauche{
+                    text-align: left;
+                    margin-left: 15%;
+                }
+                
                 
             </style>
                 <a href="https://www.google.com/search?client=opera-gx&hs=pN9&sca_esv=b6848266329b4871&sxsrf=ADLYWIKl3zLcWF2gjVO3mFi0XcJgwnjbZQ:1717966448639&q=lebron+james&uds=ADvngMgJJZ3sWYwFKSIsRiA2eMJNi_0iq8P-B4wgshQhU0peb2k-qZfPoDjXXGmOxn2Ex_uyq-GA3Vb4POY4SNbnVZLgt3NDl4iPAsyGgjI1p2N_9qiYJSdOpu85ArdJMENNlWnJV1xDM8csnDYIdMQBSGzZeNGhM_NbHWxhTp9zmiM_XH5Uyx4RWFQenSApaTvvqIFfCUVm3VV1HlcxKI7v4M8nFFOy6dw-aF7j0oY0nl_4rCnwx7iIERgVi4n3P9M1imVz0-_KSKM-0i8HIhiqvgLhwK0gVS-MB7gHcUrqUqlfXJtn-18&udm=2&prmd=invbz&sa=X&ved=2ahUKEwiEz6Dfs8-GAxU9Q6QEHdTCDDYQtKgLegQICxAB" target="_blank" style="text-decoration: none; color: inherit" class="texte-center">
@@ -268,26 +286,37 @@
            <iframe width="560" height="315" src="https://www.youtube.com/embed/DCOJTjfTKr4?si=KQIGX_AanJnDIols" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/l5JAItubuuI?si=-7y3eScLK9uZANes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8sOdu0TjFRI?si=dFR6P5u-aNO1dc9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2 class="contour-texte police1">Crédits de la map :</h2>
-            <p><b>Pyrobut :</b> Build, design du gameplay</p>
-            <p><b>Fox8a7 :</b> Command Blocs, Block Display histoire, Build, Musiques</p>
-            <p><b>Diamondsword216 :</b> Histoire, Build, Block Display</p>
-            <p><b>Track, 7. :</b> Musiques, Sound Effect (personnalisés)</p>
-            <p><b>Eddie6671 :</b> Build </p>
-            <p><b>Milix :</b> Build </p>
-            <p><b>MixlaMc :</b> Build </p>
-            <h2 class="contour-texte police1">Testeurs :</h2>
-            <p><b>Caramelloo :</b> Playtest</p>
-            <p><b>MixlaMc :</b> Playtest</p>
-            <p><b>Milix :</b> Playtest</p>
-            <p><b>Moon3dsXL :</b> Playtest</p>
-            <p><b>Eddie6671 :</b> Playtest </p>
-            <p><b>Daylowww :</b> Playtest</p>
-            <p><b>Josans :</b> Playtest</p>
-            <h2 class="contour-texte police1">Autres Crédits :</h2>
-            <p><b>Mojang/Microsoft :</b> <a href="https://www.minecraft.net/fr-fr" class="texte-blanc">Minecraft</a></p>
-            <p><b>Minitoon :</b> <a href="https://www.roblox.com/games/4623386862/Piggy" class="texte-blanc">Jeu Original</a></p>
+            <div class="credit">
+                <div class="texte-semi-gauche">
+                <h2 class="contour-texte police1">Crédits de la map :</h2>
+                <p><b>Pyrobut :</b> Build, design du gameplay</p>
+                <p><b>Fox8a7 :</b> Command Blocs, Block Display histoire, Build, Musiques</p>
+                <p><b>Diamondsword216 :</b> Histoire, Build, Block Display</p>
+                <p><b>Track, 7. :</b> Musiques, Sound Effect (personnalisés)</p>
+                <p><b>Eddie6671 :</b> Build </p>
+                <p><b>Milix :</b> Build </p>
+                <p><b>MixlaMc :</b> Build </p>
+                </div>
+
+                <div class="text_biengauche">
+                <h2 class="contour-texte police1">Testeurs :</h2>
+                <p><b>Caramelloo :</b> Playtest</p>
+                <p><b>MixlaMc :</b> Playtest</p>
+                <p><b>Milix :</b> Playtest</p>
+                <p><b>Moon3dsXL :</b> Playtest</p>
+                <p><b>Eddie6671 :</b> Playtest </p>
+                <p><b>Daylowww :</b> Playtest</p>
+                <p><b>Josans :</b> Playtest</p>
+                </div>
+           
+            
+                <div class="text_biengauche text_extremegauche">
+                <h2 class="contour-texte police1">Autres Crédits :</h2>
+                <p><b>Mojang/Microsoft :</b> <a href="https://www.minecraft.net/fr-fr" class="texte-blanc">Minecraft</a></p>
+                <p><b>Minitoon :</b> <a href="https://www.roblox.com/games/4623386862/Piggy" class="texte-blanc">Jeu Original</a></p>
+                </div>
             </div>
+            
             <div id="carte3">
                 <h1 class="contour-texte"><b>Nos Réseaux sociaux:</b></h1>
                 <footer>
@@ -325,11 +354,11 @@
                 
     
                 sidemenu.style.width = "0";
-                main.style.marginLeft = "0";
+                /*main.style.marginLeft = "0";*/
                 btn.style.marginLeft = "0";
             }else {
                 sidemenu.style.width = "250px";
-                main.style.marginLeft = "250px";
+                /*main.style.marginLeft = "250px";*/
                 btn.style.marginLeft = "250px";
             }
             }
