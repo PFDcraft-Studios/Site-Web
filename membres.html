@@ -4,11 +4,21 @@
     <head>
         <meta charset="utf-8">
         <title>PFD CRAFT - À Propos</title>
-        <link rel="icon" href="./Images/pfd_logo.png">
-        <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <meta name="description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
+    <meta name="keywords" content="pfdcraftstudio, pfdcraft studio,pfd craft studio,Map Minecraft,Minecraft,Hapig,Fox8a7,Diamondsword216,Pyrobut,Sutdio,projet,map minecraft,bababoy,discord,instagram,youtube,tiktok,reddit,twitter,web" />
+    <meta property="og:title" content="PFDCraft-Studio | Membres">
+    <meta property="og:description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
+    <meta property="og:image" content="https://i.imgur.com/kdD8R2a.png">
+    <meta property="og:url" content="https://pfdcraft.infrasky.fr/membres">
+    <meta property="og:type" content="website">
+    
+
+    <link rel="icon" type="image/png" href="./Images/pfd_logo.png">
+    <link rel="icon" href="./Images/pfd_logo.png">
+    <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -178,12 +188,13 @@
     <body>
         <div id="SideMenu" class="side-menu">
             <span class="closebtn" onclick="closeNav()">&times;</span>
-            <a href="https://pfdcraft.infrasky.fr">Menu </a>
-            <a href="#">Projets</a>
+            <a href="https://pfdcraft.infrasky.fr">Menu</a>
+            <span class="dropdown-btn" onclick="toggleDropdown()" id="btn-projet">Projets &#9660;</span>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="hapig">&nbsp;&nbsp;&nbsp;- Hapig</a>
+            </div>
             <span onclick="scrollToBottom()">Contact</span>
             <a href="membres">À propos</a>
-            
-            
         </div>
     
         <span class="openbtn" onclick="openNav()" id="Openbtn">
@@ -245,19 +256,32 @@
         
                    
                 
-                if (sidemenu.style.width === "250px"){
-                    
-        
-                    sidemenu.style.width = "0";
-                    main.style.marginLeft = "0";
-                    btn.style.marginLeft = "0";
+                    if (sidemenu.style.width === "250px"){
+            var sonout = new Audio()
+            sonout.src = "./out-toast.mp3"
+            sonout.play()
+            sidemenu.style.width = "0";
+            main.style.marginLeft = "0";
+            btn.style.marginLeft = "0";
+        }else {
+            sidemenu.style.width = "250px";
+            main.style.marginLeft = "250px";
+            btn.style.marginLeft = "250px";
+            var sonin = new Audio()
+            sonin.src = "./in-toast.mp3"
+            sonin.play()
+        }
+                }
+                function toggleDropdown() {
+                var projetbtn = document.getElementById("btn-projet")
+                var dropdownContent = document.getElementById('dropdown-content');
+                dropdownContent.classList.toggle('show');
+                if(dropdownContent.classList.contains('show')){
+                    projetbtn.firstChild.textContent = "Projets ▲"
                 }else {
-                    sidemenu.style.width = "250px";
-                    main.style.marginLeft = "250px";
-                    btn.style.marginLeft = "250px";
+                    projetbtn.firstChild.textContent = `Projets ▼`
                 }
-                }
-        
+            }
                 function closeNav() {
                     document.getElementById("SideMenu").style.width = "0";
                     document.getElementById("main").style.marginLeft = "0";

@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <title>PFD CRAFT - Hapig</title>
 
-        <meta name="google-site-verification" content="HBcBw8yC52OEaINS6VksMqTZlMCTjwIsUscmkmt34nY" />
+        
         <meta name="keywords" content="PFD Craft, Minecraft, création de mondes, Pyrobut, Fox8a7, Diamondsword216, jeu vidéo, Hapig, map Minecraft, studio, hapig,Hapig,Hapik, pfd, PFD, PFDCraft">
         <meta property="og:title" content="Hapig">
         <meta property="og:description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
@@ -186,18 +186,75 @@
     .credit_texte{
         text-align: left;
     }
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Assure que le loader est au-dessus de tout le reste */
+        transition: opacity 0.5s ease-out; 
+    }
+    .loader img {
+        transform: scale(1 - 0.5);
+        transition-delay: 2.5s;
+       
+        }
+    .loader.hidden {
+        top: 10px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .loader.hidden img{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .dropdown-btn{
+        transition: 3s ;
+    }
+    .dropdown-content {
+            transition: opacity 0.5s ease-out;
+            display: none;
+            min-width: 160px;
+            margin-left: 25px;
+            position: relative; /* Vous pouvez ajuster cela selon votre design */
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(197, 162, 162);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: #ff4343;
+        }
+
+        .show {
+            display: block;
+        }
+        
         </style>
 </head>
 <body>
-    
+    <div class="loader">
+        <img src="./loader.png" alt="Loader">
+    </div>
     <div id="SideMenu" class="side-menu">
         <span class="closebtn" onclick="closeNav()">&times;</span>
-        <a href="https://pfdcraft.infrasky.fr">Menu </a>
-        <a href="#">Projets</a>
+        <a href="https://pfdcraft.infrasky.fr">Menu</a>
+        <span class="dropdown-btn" onclick="toggleDropdown()" id="btn-projet">Projets &#9660;</span>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href="hapig">&nbsp;&nbsp;&nbsp;- Hapig</a>
+        </div>
         <span onclick="scrollToBottom()">Contact</span>
         <a href="membres">À propos</a>
-        
-        
     </div>
 
     <span class="openbtn" onclick="openNav()" id="Openbtn">
@@ -240,7 +297,7 @@
             <img src="./Images/Screenshot5.png" alt="screenshot5" width="560" height="315">
             <img src="./Images/Screenshot6.png" alt="screenshot6" width="560" height="315">
             <img src="./Images/Screenshot7.png" alt="screenshot7" width="560" height="315">
-            <h1 class="texte-gauche">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>La Map sur Internet :</u></h1>
+            <h1 class="texte-gauche contour-texte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>La Map sur Internet :</u></h1>
             <style>
                 .texte-center {
                     text-align: center;
@@ -281,6 +338,7 @@
                     /*align-self: center;*/
                     /*align-content: center;*/
                 }
+                
                 
                 
             </style>
@@ -349,6 +407,15 @@
         </div>
     
         <script>
+
+            window.addEventListener('load', function() {
+                var loader = document.querySelector(".loader");
+                loader.classList.add('hidden');
+                setTimeout(function() {
+                    loader.style.display = "none";
+                }, 500); // correspond à la durée de la transition en millisecondes
+            });
+
             function openNav() {
                 const sidemenu = document.getElementById("SideMenu")
                 const main = document.getElementById("main")
@@ -356,19 +423,35 @@
     
                
             
-            if (sidemenu.style.width === "250px"){
-                
-    
-                sidemenu.style.width = "0";
-                /*main.style.marginLeft = "0";*/
-                btn.style.marginLeft = "0";
-            }else {
-                sidemenu.style.width = "250px";
-                /*main.style.marginLeft = "250px";*/
-                btn.style.marginLeft = "250px";
+                if (sidemenu.style.width === "250px"){
+            var sonout = new Audio()
+            sonout.src = "./out-toast.mp3"
+            sonout.play()
+            sidemenu.style.width = "0";
+            main.style.marginLeft = "0";
+            btn.style.marginLeft = "0";
+        }else {
+            sidemenu.style.width = "250px";
+            main.style.marginLeft = "250px";
+            btn.style.marginLeft = "250px";
+            var sonin = new Audio()
+            sonin.src = "./in-toast.mp3"
+            sonin.play()
+        }
             }
-            }
     
+            function toggleDropdown() {
+                var projetbtn = document.getElementById("btn-projet")
+                var dropdownContent = document.getElementById('dropdown-content');
+                dropdownContent.classList.toggle('show');
+                if(dropdownContent.classList.contains('show')){
+                    projetbtn.firstChild.textContent = "Projets ▲"
+                }else {
+                    projetbtn.firstChild.textContent = `Projets ▼`
+                }
+            }
+
+
             function closeNav() {
                 document.getElementById("SideMenu").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";

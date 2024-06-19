@@ -5,7 +5,7 @@
     <title>PFD CRAFT - Menu</title>
     <meta name="google-site-verification" content="HBcBw8yC52OEaINS6VksMqTZlMCTjwIsUscmkmt34nY" />
     <meta name="description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
-    <meta name="keywords" content="pfdcraftstudio, pfdcraft studio,pfd craft studio, Map Minecraft, Minecraft, Hapig, Fox8a7, Diamondsword216, Pyrobut, Sutdio, projet, map minecraft, bababoy, discord, instagram, youtube,tiktok, reddit, twitter, web">
+    <meta name="keywords" content="pfdcraftstudio, pfdcraft studio,pfd craft studio,Map Minecraft,Minecraft,Hapig,Fox8a7,Diamondsword216,Pyrobut,Sutdio,projet,map minecraft,bababoy,discord,instagram,youtube,tiktok,reddit,twitter,web" />
     <meta property="og:title" content="PFDCraft-Studio">
     <meta property="og:description" content="PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. Le groupe est constitué de Pyrobut, Fox8a7 et Diamondsword216.">
     <meta property="og:image" content="https://i.imgur.com/kdD8R2a.png">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="PFDCRAFTSTUDIO.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, height=device-height">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -95,8 +96,7 @@
             
             cursor:pointer;
             background-color: #111;
-            color: black;
-    
+            color: rgb(255, 255, 255);
             padding: 10px 35px;
             border-radius: 10px;
             position: fixed;
@@ -192,32 +192,35 @@
     </style>
 </head>
 <body>
+    <audio src="in-toast.mp3" id="hover-son"></audio>
     <div id="SideMenu" class="side-menu">
         <span class="closebtn" onclick="closeNav()">&times;</span>
-        <a href="https://pfdcraft.infrasky.fr">Menu </a>
-        <a href="#">Projets</a>
+        <a href="https://pfdcraft.infrasky.fr">Menu</a>
+        <span class="dropdown-btn" onclick="toggleDropdown()" id="btn-projet">Projets &#9660;</span>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href="hapig">&nbsp;&nbsp;&nbsp;- Hapig</a>
+        </div>
         <span onclick="scrollToBottom()">Contact</span>
         <a href="membres">À propos</a>
-        
-        
     </div>
 
-    <span class="openbtn" onclick="openNav()" id="Openbtn">
-        <span class="icon" >&#9776;</span></span>
+    <span class="openbtn icon" onclick="openNav()" id="Openbtn" >
+        &#9776;
+    </span>
 
     <div id="main">
         <h1 class="contour-texte police1"><a href="https://pfdcraft.infrasky.fr/" style="text-decoration: none; color: inherit;">PFD CRAFT - STUDIOS</a></h1>
         <div id="carte2">
             <p style="font-size: 16px;">PFD Craft Studios est un groupe de créateurs de mondes sur le jeu vidéo Minecraft. 
                 <br>Le groupe est constitué de <b>Pyrobut</b>, <b>Fox8a7</b> et <b>Diamondsword216</b></p>
-            <p style="font-size: 16px;"><u><a href="membres" class="policelien">• Plus d'informations</a></u></p>
+            <p style="font-size: 16px;"><u><a href="membres" class="policelien" >• Plus d'informations</a></u></p>
             <h1>Nos Projets :</h1>
             <p style="font-size: 16px;">Actuellement, Nous Sommes En train de travailler sur une Map nommée <b>"Hapig"</b><br>
                 Le Gameplay est inspiré par le jeu roblox nommé <b>"<a href="https://www.roblox.com/games/4623386862/Piggy" class="texte-blanc"><u>Piggy</u></a>"</b> crée par Minitoon.<br>
                 À part le gameplay, l'histoire du jeu et les différentes cartes dans le jeu (à part la 1ère) ont été inventées pur l'occasion<br>
                 Plus d'informations en cliquant sur l'image</p>
             <h1 class="contour-texte2"><a href="hapig" style="color:  inherit;text-decoration: none;"><b><u>Hapig</b></u></a></h1>
-            <a href="hapig" class="imagehoover">
+            <a href="hapig" class="imagehoover" >
                 
                 <img  src="./Images/Hapig.PNG" alt="Hapig.png"  width="640" height="360">
                 
@@ -261,8 +264,9 @@
            
         
         if (sidemenu.style.width === "250px"){
-            
-
+            var sonout = new Audio()
+            sonout.src = "./out-toast.mp3"
+            sonout.play()
             sidemenu.style.width = "0";
             main.style.marginLeft = "0";
             btn.style.marginLeft = "0";
@@ -270,6 +274,9 @@
             sidemenu.style.width = "250px";
             main.style.marginLeft = "250px";
             btn.style.marginLeft = "250px";
+            var sonin = new Audio()
+            sonin.src = "./in-toast.mp3"
+            sonin.play()
         }
         }
 
@@ -286,6 +293,16 @@
             behavior:"smooth"
         });
     }
+    function toggleDropdown() {
+                var projetbtn = document.getElementById("btn-projet")
+                var dropdownContent = document.getElementById('dropdown-content');
+                dropdownContent.classList.toggle('show');
+                if(dropdownContent.classList.contains('show')){
+                    projetbtn.firstChild.textContent = "Projets ▲"
+                }else {
+                    projetbtn.firstChild.textContent = `Projets ▼`
+                }
+            }
     function scrollToTop() {
         window.scrollTo({
             top: 0,
